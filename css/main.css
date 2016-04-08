@@ -3,32 +3,77 @@ html{
 	
 	/* Ensure the html element always takes up the full height of the browser window */
 	width: 100%;
-	font-family: 'Roboto-Bold';
+	
 
 }
 
 body{
- min-height:100%;
- }
+	min-height:100%;
+}
 
- .bg_img img{
- 	  /* Set rules to fill background */
+
+@font-face { font-family: 'Olivier-Demo'; src: url('../fonts/olivier_01.ttf'); font-weight: normal; font-style: normal;}
+
+@font-face { font-family: 'Roboto-Black'; src: url('../fonts/Roboto-Black.ttf'); font-weight: normal; font-style: normal;}
+
+@font-face { font-family: 'Roboto-BlackItalic'; src: url('../fonts/Roboto-BlackItalic.ttf'); font-weight: normal; font-style: italic;}
+
+@font-face { font-family: 'Roboto-Bold'; src: url('../fonts/Roboto-Bold.ttf'); font-weight: bold; font-style: normal;}
+
+@font-face { font-family: 'Roboto-BoldCondensed'; src: url('../fonts/Roboto-BoldCondensed.ttf'); font-weight: bold; font-style: normal;}
+
+@font-face { font-family: 'Roboto-BoldCondensedItalic'; src: url('../fonts/Roboto-BoldCondensedItalic.ttf'); font-weight: bold; font-style: italic;}
+
+@font-face { font-family: 'Roboto-BoldItalic'; src: url('../fonts/Roboto-BoldItalic.ttf'); font-weight: normal; font-style: italic;}
+
+@font-face { font-family: 'Roboto-Condensed'; src: url('../fonts/Roboto-Condensed.ttf'); font-weight: normal; font-style: normal;}
+
+@font-face { font-family: 'Roboto-CondensedItalic'; src: url('../fonts/Roboto-CondensedItalic.ttf'); font-weight: normal; font-style: italic;}
+
+@font-face { font-family: 'Roboto-Italic'; src: url('../fonts/Roboto-Italic.ttf'); font-weight: normal; font-style: italic;}
+
+@font-face { font-family: 'Roboto-Light'; src: url('../fonts/Roboto-Light.ttf'); font-weight: normal; font-style: normal;}
+
+@font-face { font-family: 'Roboto-LightItalic'; src: url('../fonts/Roboto-LightItalic.ttf'); font-weight: normal; font-style: italic;}
+
+@font-face { font-family: 'Roboto-Medium'; src: url('../fonts/Roboto-Medium.ttf'); font-weight: normal; font-style: normal;}
+
+@font-face { font-family: 'Roboto-MediumItalic'; src: url('../fonts/Roboto-MediumItalic.ttf'); font-weight: normal; font-style: italic;}
+
+@font-face { font-family: 'Roboto-Regular'; src: url('../fonts/Roboto-Regular.ttf'); font-weight: normal; font-style: normal;}
+
+@font-face { font-family: 'Roboto-Thin'; src: url('../fonts/Roboto-Thin.ttf'); font-weight: normal; font-style: normal;}
+
+@font-face { font-family: 'Roboto-ThinItalic'; src: url('../fonts/Roboto-ThinItalic.ttf'); font-weight: normal; font-style: italic;}
+
+
+
+.bg_img img{
  	min-height: 100%;
   	min-width: 1024px;
-	
-  /* Set up proportionate scaling */
   	width: 100%;
   	height: auto;
-	
-  /* Set up positioning */
   	position: fixed;
   	top: 0;
   	left: 0;
   	background-repeat:no-repeat;
 	background-position: center top;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+}
 
- }
+.bg_img{
+	 background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+}
 
+
+/**   INDEX PAGE DESIGN   **/
+/***************************/
+/***************************/
+/***************************/
 
 .plate{
 	position: absolute;
@@ -55,17 +100,24 @@ body{
 
 .form-class input[type="text"]{
 
-    padding: 3% 5%;
+    padding: 3% 4%;
     font-size: 10pt;
-
+    font-family: "Roboto-Light";
 	margin-bottom: 1%;
 	border: 0px solid transparent;
 	box-shadow: 1px 1px 5px #888888;
 }
 
+.form-class input[type="text"]:focus{
+	margin-bottom: 1.2%;
+	padding: 4% 6%;
+}
+
 .form-class input[type="submit"]{
 	margin-top: 5%; 
+	font-family: "Roboto-Light";
 }
+
 .submit{
 	padding: 3% 5%;
     background: #ff0000;
@@ -73,6 +125,11 @@ body{
     color: white;
     text-align: center;
     box-shadow: 1px 1px 5px #888888;
+}
+
+.submit:hover{
+	background: #b30000;
+	transition: all 0.15s ease;
 }
 
 .form-class input::-webkit-input-placeholder {
@@ -105,12 +162,12 @@ padding-left: 2%;
 
 .text{
 	margin-left: 3%;
-	color: #7F0E0E;
+	color: white;
 	font-size: 2vh;
 }
 
 .help-div{
-	margin-top: 60%;
+	margin-top: 110%;
 }
 
 .help{
@@ -121,8 +178,6 @@ padding-left: 2%;
 	color: #ff0000;
 }
 
-
-
 .circle{
 	padding: 15px 20px;
 	border-radius: 50%;
@@ -131,3 +186,89 @@ padding-left: 2%;
 }
 
 
+/** END OF INDEX PAGE DESIGN **/
+/******************************/
+/******************************/
+/******************************/
+/******************************/
+/**   DOWNLOAD PAGE DESIGN   **/
+
+.book-img{
+	margin-top: 2%;
+}
+
+.book-img img{
+	width: 50%;
+	height: auto;
+	box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.59);
+}
+
+.top-download{
+	font-size: 3vh;
+	color: white;
+	margin-top: 5%;
+	font-family: "Roboto-Bold";
+}
+
+.book-img p{
+	margin-top: 5%;
+	font-family: "Roboto-Light";
+	color: white;
+	font-size: 2vh;
+}
+
+.author-title{
+	font-style: italic;
+	font-size: 12pt!important;
+	margin-top: -5px!important;
+}
+
+.button-dl{
+	background: red;
+    border: 1px solid red;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 5px;
+    font-size: 10pt;
+    margin-top: 5%;
+}
+
+.button-dl:hover{
+	background: #b30000;
+	border: 1px solid #b30000;
+	transition: all 0.15s ease;
+}
+
+.access-text{
+	color: white;
+    font-size: 12pt;
+    margin-top: 5%;
+}
+
+.access-text-2nd{
+	color: white;
+    font-size: 10pt;
+    margin-top: 5%;
+}
+
+.button-dl-reminder{
+	font-size: 1.5vh;
+    color: white;
+    margin-top: 2%;
+}
+
+.enjoy-text {
+	margin-top: 5%;
+    color: white;
+    font-size: 5vh;
+}
+
+.trouble-design {
+    color: white;
+    font-size: 1.5vh;
+    margin-top: 15%;
+}
+
+.trouble-design a{
+	color: red;
+}
